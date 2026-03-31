@@ -1,6 +1,6 @@
-// Componente3   ---   es meramente una "notificación al usuario
+// Componente3   ---   es meramente una "notificación al usuario"
 import React from "react";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";                 // "render()" depende de "useSelector"
 
 const SuperCoins = () => {
@@ -21,7 +21,11 @@ const SuperCoins = () => {
         }
     }, [totalAmount]);
 
-    return (<div>Super Coins: {superCoins}</div>);
+    return (
+        <div className="super-coins" style={{ textAlign: "center" }}>
+            <h2 className="super-coins-title">Super Coins</h2>
+            <p className="super-coins-info">Con esta compra ganarás {superCoins} super coins</p>
+        </div>);
 };
 
 export default SuperCoins;
